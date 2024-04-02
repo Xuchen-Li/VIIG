@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Publication - Human-Machine Universal Visual Intelligence [人机通用视觉智能]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/stanford.css">
+  <link rel="stylesheet" href="css/fotter.css">
+
+  <script src="js/jquery.min.js"></script>
+
+  <script>
+    function display(id_) {
+      var id_div = document.getElementById(id_)
+      if (id_div.style.display == "none") {
+        id_div.style.display = "";
+      } else {
+        id_div.style.display = "none";
+      }
+    }
+
+    $(document).ready(function () {
+      var button_patents = document.getElementById("button_patents");
+      var button_paper = document.getElementById("button_paper");
+
+      $("#button_paper").click(function () {
+        if (window.getComputedStyle(button_paper, null).backgroundColor == 'rgba(0, 0, 0, 0)') {
+          $("#patents_list").toggle();
+          $("#paper_list").toggle();
+          button_patents.style.backgroundColor = 'Transparent';
+          button_patents.style.color = '#1c3ed3';
+          button_paper.style.backgroundColor = '#1c3ed3';
+          button_paper.style.color = '#fff';
+        }
+      });
+      $("#button_patents").click(function () {
+        if (window.getComputedStyle(button_patents, null).backgroundColor == 'rgba(0, 0, 0, 0)') {
+          $("#patents_list").toggle();
+          $("#paper_list").toggle();
+          button_patents.style.backgroundColor = '#1c3ed3';
+          button_patents.style.color = '#fff';
+          button_paper.style.backgroundColor = 'Transparent';
+          button_paper.style.color = '#1c3ed3';
+        }
+      });
+    });
+  </script>
+  <style type="text/css">
+    li {
+      text-align: justify;
+    }
+
+    td {
+      vertical-align: middle;
+      text-align: left;
+    }
+
+    #button_select {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      grid-auto-rows: auto;
+      background-repeat: no-repeat;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      text-align: center;
+    }
+
+    #button_paper {
+      background-color: #1c3ed3;
+      color: #fff;
+      display: block;
+      grid-column: 1 / 8;
+      grid-row: 1 / 1;
+    }
+
+    #button_patents {
+      background-color: Transparent;
+      color: #1c3ed3;
+      display: block;
+      grid-column: 8 / 8;
+      grid-row: 1 / 2;
+    }
+
+    #button_2021 {
+      background-color: Transparent;
+      color: #1c3ed3;
+      display: block;
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    #button_2020 {
+      background-color: Transparent;
+      color: #1c3ed3;
+      display: block;
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    #button_2019 {
+      background-color: Transparent;
+      color: #1c3ed3;
+      display: block;
+      grid-column: 3;
+      grid-row: 2;
+    }
+
+    #button_2018 {
+      background-color: Transparent;
+      color: #1c3ed3;
+      display: block;
+      grid-column: 4;
+      grid-row: 2;
+    }
+
+    #button_2017 {
+      background-color: Transparent;
+      color: #1c3ed3;
+      display: block;
+      grid-column: 5;
+      grid-row: 2;
+    }
+
+    #button_before {
+      background-color: Transparent;
+      color: #1c3ed3;
+      display: block;
+      grid-column: 6;
+      grid-row: 2;
+    }
+
+
+    #patents_list {
+      display: none;
+    }
+
+    .bibtex {
+      margin-left: 40px;
+      font-family: courier, sans-serif;
+      padding: 5px;
+      line-height: 20px;
+    }
+
+    /*paper*/
+    .publication {
+      padding: 30px;
+      font-size: 15.5px;
+      line-height: 1.6;
+    }
+
+    .paper {
+      border-bottom: solid 1px #E4E4E4;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    .paper a {
+      text-decoration: none;
+      color: #1c3ed3;
+    }
+
+    .ptitle {
+      padding: 1px;
+      margin: 2px;
+      font-weight: bold;
+    }
+
+    .pauthors {
+      padding: 1px;
+      margin: 2px;
+      font-style: italic;
+    }
+
+    .pvenue {
+      color: #500;
+      margin: 2px;
+      font-weight: bold;
+    }
+
+    .plink {
+      padding: 1px;
+      margin: 2px;
+    }
+
+    .paper img {
+      float: left;
+      /* 左侧图片混排 */
+      margin-right: 20px;
+      /* 图片右端与文字的距离 */
+      margin-bottom: 10px;
+    }
+  </style>
+
+  <!-- <script defer src="https://use.fontawesome.com/releases/v5.9.0/js/all.js"></script> -->
+</head>
+
+<body class='page page-about'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+    <ul>
+      <li class="menu-item-about">
+        <a href="./index.html">
+          <span>Home</span>
+        </a>
+      </li>
+
+      <li class="menu-item-people">
+        <a href="./people.html">
+          <span>People</span>
+        </a>
+      </li>
+
+      <li class="menu-item-publication  active">
+        <a href="./publication.html">
+          <span>Publication</span>
+        </a>
+      </li>
+
+      <li class="menu-item-software">
+        <a href="./research.html">
+          <span>Research</span>
+        </a>
+      </li>
+
+      <li class="menu-item-software">
+        <a href="./info.html">
+          <span>Demos</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="wrapper">
+    <div class='header'>
+      <div class="container">
+        <h3 class="header-title">
+          <a href="./index.html"><img src="./grouplogo.png" style="max-width: 50%"></a>
+          <!-- <a href="./home.html">Intelligent Multimedia Security Group</a> -->
+        </h3>
+        <div id="main-menu" class="main-menu">
+          <ul>
+            <li class="menu-item-about">
+              <a href="./index.html">
+                <span>Home</span>
+              </a>
+            </li>
+
+            <li class="menu-item-people">
+              <a href="./people.html">
+                <span>People</span>
+              </a>
+            </li>
+
+            <li class="menu-item-publication active">
+              <a href="./publication.html">
+                <span>Publication</span>
+              </a>
+            </li>
+
+            <li class="menu-item-software">
+              <a href="./research.html">
+                <span>Research</span>
+              </a>
+            </li>
+
+            <li class="menu-item-software">
+              <a href="./info.html">
+                <span>Demos</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" role="presentation"
+          aria-label="mobile menu trigger">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container mt-2">
+      <div id="button_select">
+        <a type="button" id="button_paper" class="header container"><span>Acceptance</span></a>
+        <a type="button" id="button_patents" class="header container">Under Review</a>
+      </div>
+      <div id="paper_list">
+        <div id="year_2024">
+          <h3>2024</h3>
+          <div class="paper">
+            <img height="110px" width="210px" src="./img/publication/awcv.png">
+            <div class="pauthors">M.Wu, K.Huang, Y.Cai, S.Hu, Y.Zhao, and W. Wang. </div>
+            <div class="ptitle">Finger in Camera Speaks Everything: Unconstrained Air-Writing for Real-World.</div>
+            <div class="pvenue">IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2024.</div>
+            <div class="plink">
+              <a target="_blank">[Paper]</a>
+              <a onclick="display('awcv')" style="color: #111213">[BibTeX] </a>
+              <div style="display: none;" class="BibtexExpand" id="awcv">
+                <pre class="bibtex">
+                      </pre>
+              </div>
+            </div>
+          </div>
+
+          <div id="year_2023">
+            <h3>2023</h3>
+            <div class="paper">
+              <img height="110px" width="210px" src="./img/publication/biodrone.png">
+              <div class="pauthors">X.Zhao, S.Hu, Y.Wang, J.Zhang, Y.Hu, R.Liu, H.Ling, Y.Li, R.Li, K.Liu, and
+                J.Li.
+              </div>
+              <div class="ptitle">Biodrone: A bionic drone-based single object tracking benchmark for robust
+                vision.
+              </div>
+              <div class="pvenue">International Journal of Computer Vision (IJCV), 2023.</div>
+              <div class="plink">
+                <a href="https://link.springer.com/article/10.1007/s11263-023-01937-0" target="_blank">[Paper]</a>
+                <a onclick="display('biodrone')" style="color: #1c3ed3">[BibTeX] </a>
+                <div style="display: none;" class="BibtexExpand" id="biodrone">
+                  <pre class="bibtex">
+@article{biodrone,
+title={BioDrone: A Bionic Drone-Based Single Object Tracking Benchmark for Robust Vision},
+author={Zhao, Xin and Hu, Shiyu and Wang, Yipei and Zhang, Jing and Hu, Yimin and Liu, Rongshuai and Ling, Haibin and
+Li, Yin and Li, Renshu and Liu, Kun and others},
+journal={International Journal of Computer Vision},
+pages={1--26},
+year={2023},
+publisher={Springer}
+}
+                        </pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="paper">
+              <img height="110px" width="210px" src="./img/publication/mgit.png">
+              <div class="pauthors">S.Hu, D.Zhang, M.Wu, X.Feng, X.Li, X.Zhao, and K.Huang.</div>
+              <div class="ptitle">A multi-modal global instance tracking benchmark (MGIT): Better locating target
+                in
+                complex spatio-temporal and causal relationship.</div>
+              <div class="pvenue">Conference on Neural Information Processing Systems (NeurIPS), 2023.</div>
+              <div class="plink">
+                <a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/4ea14e6090343523ddcd5d3ca449695f-Abstract-Datasets_and_Benchmarks.html"
+                  target="_blank">[Paper]</a>
+                <a onclick="display('mgit')" style="color: #1c3ed3">[BibTeX] </a>
+                <div style="display: none;" class="BibtexExpand" id="mgit">
+                  <pre class="bibtex">
+@article{mgit,
+title={A Multi-modal Global Instance Tracking Benchmark (MGIT): Better Locating Target in Complex Spatio-temporal and
+Causal Relationship},
+author={Hu, Shiyu and Zhang, Dailing and Feng, Xiaokun and Li, Xuchen and Zhao, Xin and Huang, Kaiqi and others},
+journal={Advances in Neural Information Processing Systems},
+volume={36},
+year={2024}
+}
+                        </pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="paper">
+              <img height="110px" width="210px" src="./img/publication/sotverse.png">
+              <div class="pauthors">S.Hu, X.Zhao, and K.Huang.</div>
+              <div class="ptitle">Sotverse: A user-defined task space of single object tracking.</div>
+              <div class="pvenue">International Journal of Computer Vision (IJCV), 2023.</div>
+              <div class="plink">
+                <a href="https://link.springer.com/article/10.1007/s11263-023-01908-5" target="_blank">[Paper]</a>
+                <a onclick="display('sotverse')" style="color: #1c3ed3">[BibTeX] </a>
+                <div style="display: none;" class="BibtexExpand" id="sotverse">
+                  <pre class="bibtex">
+@article{sotverse,
+title={SOTVerse: A user-defined task space of single object tracking},
+author={Hu, Shiyu and Zhao, Xin and Huang, Kaiqi},
+journal={International Journal of Computer Vision},
+volume={132},
+number={3},
+pages={872--930},
+year={2024},
+publisher={Springer}
+}
+                        </pre>
+                </div>
+              </div>
+            </div>
+
+            <div id="year_2023">
+              <h3>2022</h3>
+              <div class="paper">
+                <img height="110px" width="210px" src="./img/publication/git.png">
+                <div class="pauthors">S.Hu, X.Zhao, L.Huang, and K.Huang.
+                </div>
+                <div class="ptitle">Global instance tracking: Locating target more like humans.
+                </div>
+                <div class="pvenue">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI),
+                  2022.
+                </div>
+                <div class="plink">
+                  <a href="https://ieeexplore.ieee.org/abstract/document/9720246" target="_blank">[Paper]</a>
+                  <a onclick="display('git')" style="color: #1c3ed3">[BibTeX] </a>
+                  <div style="display: none;" class="BibtexExpand" id="git">
+                    <pre class="bibtex">
+@article{git,
+title={Global instance tracking: Locating target more like humans},
+author={Hu, Shiyu and Zhao, Xin and Huang, Lianghua and Huang, Kaiqi},
+journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+volume={45},
+number={1},
+pages={576--592},
+year={2022},
+publisher={IEEE}
+}
+                        </pre>
+                  </div>
+                </div>
+              </div>
+
+              <div id="year_2019">
+                <h3>2019</h3>
+                <div class="paper">
+                  <img height="110px" width="210px" src="./img/publication/got-10k.png">
+                  <div class="pauthors">L.Huang, X.Zhao, and K.Huang.</div>
+                  <div class="ptitle">Got-10k: A large high-diversity benchmark for generic object tracking in
+                    the wild.
+                  </div>
+                  <div class="pvenue">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI),
+                    2019.
+                  </div>
+                  <div class="plink">
+                    <a href="https://ieeexplore.ieee.org/abstract/document/8922619" target="_blank">[Paper]</a>
+                    <a onclick="display('got-10k')" style="color: #1c3ed3">[BibTeX] </a>
+                    <div style="display: none;" class="BibtexExpand" id="got-10k">
+                      <pre class="bibtex">
+@article{got-10k,
+title={Got-10k: A large high-diversity benchmark for generic object tracking in the wild},
+author={Huang, Lianghua and Zhao, Xin and Huang, Kaiqi},
+journal={IEEE transactions on pattern analysis and machine intelligence},
+volume={43},
+number={5},
+pages={1562--1577},
+year={2019},
+publisher={IEEE}
+}
+                          </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="patents_list">
+        <div id="year_2024">
+          <h3>2024</h3>
+          <div class="paper">
+            <img height="110px" width="210px" src="./img/review/memvlt.png">
+            <div class="pauthors">X.Feng, X.Li, S.Hu, D.Zhang, M. Wu, X. Chen, and K. Huang. </div>
+            <div class="ptitle">Remembering Target More Like Humans: A Robust Visual-Language Tracker with Adaptive
+              Prompts.</div>
+            <div class="pvenue">International Joint Conference on Artificial Intelligence (IJCAI), 2024.</div>
+            <div class="plink">
+              <a target="_blank">[Paper]</a>
+              <a onclick="display('awcv')" style="color: #111213">[BibTeX] </a>
+              <div style="display: none;" class="BibtexExpand" id="awcv">
+                <pre class="bibtex">
+                            </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <div class="container">
+      <div class="footer-text text-center">
+        Copyright© 2024 HMUVI | 地址: 北京市海淀区中关村东路95号 <br>
+        <!-- <img src="./footer.png" width="18px"> 京公网安备 11011602000736号 &nbsp;&nbsp;&nbsp;&nbsp;<a
+          href="http://beian.miit.gov.cn" target="_blank" style="color: white">京ICP备20030229号</a> -->
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript"
+    src="https://statweb.stanford.edu/~candes/js/scripts.min.bf1e1f7ae8e03db5f012356e825843facdff51c0a559cb0d27fe2bbe1db405c2.js"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"
+    integrity="sha256-fTuUgtT7O2rqoImwjrhDgbXTKUwyxxujIMRIK7TbuNU=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/04.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script>
+    $(function () { $('[data-toggle="tooltip"]').tooltip() })
+  </script>
+
+
+</body>
+
+</html>
