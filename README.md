@@ -1,1 +1,1 @@
-Universal Visual Intelligence Group (UVIG), which has been updating since 2024.
+Visual Intelligence Interest Group (VIIG), which has been updating since 2024.
