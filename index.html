@@ -4,19 +4,22 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    /* 设置轮播图图片的最大高度为视口高度的一定比例，以适应不同设备 */
     .carousel-item img {
       max-height: 50vh;
-      /* 限制图片最大高度为视口高度的50% */
       object-fit: cover;
-      /* 保持图片的宽高比，多余部分裁剪 */
     }
 
-    /* 针对小屏幕设备的样式调整 */
     @media (max-width: 768px) {
       .carousel-item img {
         max-height: 100vh;
-        /* 在小屏幕上，图片最大高度设为视口高度的100% */
+      }
+
+      .main-menu {
+        display: block !important;
+      }
+
+      .hamburger {
+        display: none;
       }
     }
   </style>
@@ -61,8 +64,6 @@
     }
   </style>
   <script src="js/jquery.min.js"></script>
-  <!-- <script defer src="https://use.fontawesome.com/releases/v5.9.0/js/all.js"></script> -->
-
 </head>
 
 <body class='page page-about'>
@@ -104,9 +105,6 @@
       <div class="container">
         <h3 class="header-title">
           <a href="./index.html"><img src="./grouplogo.webp" style="max-width: 50%"></a>
-          <!-- <div class="lab-brand"><a href="./home.html">I M S G</a></div> -->
-          <!-- <a href="./home.html">I M S G</a> -->
-          <!-- <p style="color: #666666;">Intelligent Multimedia Security Group</p> -->
         </h3>
         <div id="main-menu" class="main-menu">
           <ul>
@@ -141,20 +139,9 @@
             </li>
           </ul>
         </div>
-        <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" role="presentation"
-          aria-label="mobile menu trigger">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
       </div>
-
     </div>
 
-    <!-- <div class="container mb-2 mt-3" style="text-align: center; position:relative;">
-      <img width="100%" src="home.webp">
-    </div> -->
-    <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin:0 auto;width:1000px"> -->
     <div id="myCarousel" class="carousel slide container mb-2 mt-2" data-ride="carousel" data-interval="3000">
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -297,19 +284,8 @@
     </div>
   </div>
 
-  <!-- <div class="footer">
-    <div class="container">
-      <div class="footer-text text-center">
-        Copyright© 2024 VIIG<br>
-      </div>
-    </div>
-  </div> -->
-
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery-3.4.1.slim.min.js"></script>
-
-  <script type="text/javascript"
-    src="https://statweb.stanford.edu/~candes/js/scripts.min.bf1e1f7ae8e03db5f012356e825843facdff51c0a559cb0d27fe2bbe1db405c2.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"
     integrity="sha256-fTuUgtT7O2rqoImwjrhDgbXTKUwyxxujIMRIK7TbuNU=" crossorigin="anonymous"></script>
