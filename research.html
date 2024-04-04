@@ -36,43 +36,41 @@
     p {
       text-align: justify;
     }
+
+    .hamburger {
+      position: relative;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    #navigation {
+      position: absolute;
+      top: 100%;
+      left: -40px;
+      width: 200%;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255);
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+      box-shadow: none;
+    }
+
+    #navigation.show-menu {
+      opacity: 1;
+      visibility: visible;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
   </style>
 </head>
 
 <body class='page page-about'>
-  <div id="main-menu-mobile" class="main-menu-mobile">
-    <ul>
-      <li class="menu-item-about">
-        <a href="./index.html">
-          <span>Home</span>
-        </a>
-      </li>
-
-      <li class="menu-item-people">
-        <a href="./people.html">
-          <span>People</span>
-        </a>
-      </li>
-
-      <li class="menu-item-publications">
-        <a href="./publication.html">
-          <span>Publication</span>
-        </a>
-      </li>
-
-      <li class="menu-item-software  active">
-        <a href="./research.html">
-          <span>Research</span>
-        </a>
-      </li>
-
-      <li class="menu-item-software">
-        <a href="./info.html">
-          <span>Demos</span>
-        </a>
-      </li>
-    </ul>
-  </div>
   <div class="wrapper">
     <div class='header'>
       <div class="container">
@@ -86,25 +84,21 @@
                 <span>Home</span>
               </a>
             </li>
-
             <li class="menu-item-people">
               <a href="./people.html">
                 <span>People</span>
               </a>
             </li>
-
             <li class="menu-item-publications">
               <a href="./publication.html">
                 <span>Publication</span>
               </a>
             </li>
-
             <li class="menu-item-software   active">
               <a href="./research.html">
                 <span>Research</span>
               </a>
             </li>
-
             <li class="menu-item-software">
               <a href="./info.html">
                 <span>Demos</span>
@@ -112,19 +106,35 @@
             </li>
           </ul>
         </div>
-        <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" role="presentation"
-          aria-label="mobile menu trigger">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
+        <div class="hamburger hamburger--slider" tabindex="0" aria-label="Menu" role="button"
+          aria-controls="navigation">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+          <nav id="navigation">
+            <a href="./index.html">
+              <span>Home</span>
+            </a>
+            <a href="./people.html">
+              <span>People</span>
+            </a>
+            <a href="./publication.html">
+              <span>Publication</span>
+            </a>
+            <a href="./research.html">
+              <span>Research</span>
+            </a>
+            <a href="./info.html">
+              <span>Demos</span>
+            </a>
+          </nav>
+        </div>
       </div>
     </div>
 
 
     <div class="container mt-2">
       <div class="row">
-
         <div class="col-md-6">
           <div class="media">
             <h4><a target="_blank"><strong>Designing more human-like tasks.</strong></a>
@@ -177,12 +187,20 @@
             </p>
           </div>
         </div>
-
       </div>
-
     </div>
   </div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var menuButton = document.querySelector('.hamburger');
+      var navigation = document.getElementById('navigation');
+
+      menuButton.addEventListener('click', function () {
+        navigation.classList.toggle('show-menu');
+      });
+    });
+  </script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"
@@ -193,7 +211,6 @@
   <script>
     $(function () { $('[data-toggle="tooltip"]').tooltip() })
   </script>
-
 </body>
 
 </html>

@@ -7,14 +7,13 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Demos - Visual Intelligence Interest Group (VIIG)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="stylesheet" href="css/fotter.css">
   <link rel="stylesheet" href="css/stanford.css">
 
   <style type="text/css">
-    ul {
+    /* ul {
       margin-left: 20px;
-    }
+    } */
 
     p {
       text-align: justify;
@@ -24,44 +23,50 @@
       margin-left: auto;
       margin-right: auto;
     }
+
+    .container {
+      width: 100%;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+
+    .hamburger {
+      position: relative;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    #navigation {
+      position: absolute;
+      top: 100%;
+      left: -40px;
+      width: 200%;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255);
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+      box-shadow: none;
+    }
+
+    #navigation.show-menu {
+      opacity: 1;
+      visibility: visible;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
   </style>
 </head>
 
 <body class='page page-about'>
-  <div id="main-menu-mobile" class="main-menu-mobile">
-    <ul>
-      <li class="menu-item-about">
-        <a href="./index.html">
-          <span>Home</span>
-        </a>
-      </li>
-
-      <li class="menu-item-people">
-        <a href="./people.html">
-          <span>People</span>
-        </a>
-      </li>
-
-      <li class="menu-item-publications">
-        <a href="./publication.html">
-          <span>Publication</span>
-        </a>
-      </li>
-
-      <li class="menu-item-software">
-        <a href="./research.html">
-          <span>Research</span>
-        </a>
-      </li>
-
-      <li class="menu-item-software  active">
-        <a href="./info.html">
-          <span>Demos</span>
-        </a>
-      </li>
-
-    </ul>
-  </div>
   <div class="wrapper">
     <div class='header'>
       <div class="container">
@@ -75,7 +80,6 @@
                 <span>Home</span>
               </a>
             </li>
-
             <li class="menu-item-people">
               <a href="./people.html">
                 <span>People</span>
@@ -86,13 +90,11 @@
                 <span>Publication</span>
               </a>
             </li>
-
             <li class="menu-item-software">
               <a href="./research.html">
                 <span>Research</span>
               </a>
             </li>
-
             <li class="menu-item-software  active">
               <a href="./info.html">
                 <span>Demos</span>
@@ -100,15 +102,31 @@
             </li>
           </ul>
         </div>
-        <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" role="presentation"
-          aria-label="mobile menu trigger">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
+        <div class="hamburger hamburger--slider" tabindex="0" aria-label="Menu" role="button"
+          aria-controls="navigation">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+          <nav id="navigation">
+            <a href="./index.html">
+              <span>Home</span>
+            </a>
+            <a href="./people.html">
+              <span>People</span>
+            </a>
+            <a href="./publication.html">
+              <span>Publication</span>
+            </a>
+            <a href="./research.html">
+              <span>Research</span>
+            </a>
+            <a href="./info.html">
+              <span>Demos</span>
+            </a>
+          </nav>
+        </div>
       </div>
     </div>
-
 
     <div class="container mt-2">
       <div>
@@ -141,7 +159,6 @@
           </tr>
         </table>
       </div>
-
       <br />
       <br />
       <div>
@@ -180,7 +197,6 @@
           </tr>
         </table>
       </div>
-
       <br />
       <br />
       <div>
@@ -221,7 +237,6 @@
           </tr>
         </table>
       </div>
-
       <br />
       <br />
       <div>
@@ -261,7 +276,6 @@
           </tr>
         </table>
       </div>
-
       <br />
       <br />
       <div>
@@ -301,15 +315,22 @@
           </tr>
         </table>
       </div>
-
     </div>
-
   </div>
 
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var menuButton = document.querySelector('.hamburger');
+      var navigation = document.getElementById('navigation');
+
+      menuButton.addEventListener('click', function () {
+        navigation.classList.toggle('show-menu');
+      });
+    });
+  </script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery-3.4.1.slim.min.js"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"
     integrity="sha256-fTuUgtT7O2rqoImwjrhDgbXTKUwyxxujIMRIK7TbuNU=" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
@@ -318,7 +339,6 @@
   <script>
     $(function () { $('[data-toggle="tooltip"]').tooltip() })
   </script>
-
 </body>
 
 </html>

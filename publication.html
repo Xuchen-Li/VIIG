@@ -86,55 +86,6 @@
       grid-row: 1 / 2;
     }
 
-    #button_2021 {
-      background-color: Transparent;
-      color: #1c3ed3;
-      display: block;
-      grid-column: 1;
-      grid-row: 2;
-    }
-
-    #button_2020 {
-      background-color: Transparent;
-      color: #1c3ed3;
-      display: block;
-      grid-column: 2;
-      grid-row: 2;
-    }
-
-    #button_2019 {
-      background-color: Transparent;
-      color: #1c3ed3;
-      display: block;
-      grid-column: 3;
-      grid-row: 2;
-    }
-
-    #button_2018 {
-      background-color: Transparent;
-      color: #1c3ed3;
-      display: block;
-      grid-column: 4;
-      grid-row: 2;
-    }
-
-    #button_2017 {
-      background-color: Transparent;
-      color: #1c3ed3;
-      display: block;
-      grid-column: 5;
-      grid-row: 2;
-    }
-
-    #button_before {
-      background-color: Transparent;
-      color: #1c3ed3;
-      display: block;
-      grid-column: 6;
-      grid-row: 2;
-    }
-
-
     #patents_list {
       display: none;
     }
@@ -146,7 +97,6 @@
       line-height: 20px;
     }
 
-    /*paper*/
     .publication {
       padding: 30px;
       font-size: 15.5px;
@@ -192,43 +142,41 @@
       margin-right: 20px;
       margin-bottom: 10px;
     }
+
+    .hamburger {
+      position: relative;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    #navigation {
+      position: absolute;
+      top: 100%;
+      left: -40px;
+      width: 200%;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255);
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+      box-shadow: none;
+    }
+
+    #navigation.show-menu {
+      opacity: 1;
+      visibility: visible;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
   </style>
 </head>
 
 <body class='page page-about'>
-  <div id="main-menu-mobile" class="main-menu-mobile">
-    <ul>
-      <li class="menu-item-about">
-        <a href="./index.html">
-          <span>Home</span>
-        </a>
-      </li>
-
-      <li class="menu-item-people">
-        <a href="./people.html">
-          <span>People</span>
-        </a>
-      </li>
-
-      <li class="menu-item-publication  active">
-        <a href="./publication.html">
-          <span>Publication</span>
-        </a>
-      </li>
-
-      <li class="menu-item-software">
-        <a href="./research.html">
-          <span>Research</span>
-        </a>
-      </li>
-
-      <li class="menu-item-software">
-        <a href="./info.html">
-          <span>Demos</span>
-        </a>
-      </li>
-    </ul>
-  </div>
   <div class="wrapper">
     <div class='header'>
       <div class="container">
@@ -242,25 +190,21 @@
                 <span>Home</span>
               </a>
             </li>
-
             <li class="menu-item-people">
               <a href="./people.html">
                 <span>People</span>
               </a>
             </li>
-
             <li class="menu-item-publication active">
               <a href="./publication.html">
                 <span>Publication</span>
               </a>
             </li>
-
             <li class="menu-item-software">
               <a href="./research.html">
                 <span>Research</span>
               </a>
             </li>
-
             <li class="menu-item-software">
               <a href="./info.html">
                 <span>Demos</span>
@@ -268,12 +212,29 @@
             </li>
           </ul>
         </div>
-        <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" role="presentation"
-          aria-label="mobile menu trigger">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
+        <div class="hamburger hamburger--slider" tabindex="0" aria-label="Menu" role="button"
+          aria-controls="navigation">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+          <nav id="navigation">
+            <a href="./index.html">
+              <span>Home</span>
+            </a>
+            <a href="./people.html">
+              <span>People</span>
+            </a>
+            <a href="./publication.html">
+              <span>Publication</span>
+            </a>
+            <a href="./research.html">
+              <span>Research</span>
+            </a>
+            <a href="./info.html">
+              <span>Demos</span>
+            </a>
+          </nav>
+        </div>
       </div>
     </div>
 
@@ -295,7 +256,6 @@
               <a target="_blank">[BibTex]</a>
             </div>
           </div>
-
           <div id="year_2023">
             <h3>2023</h3>
             <div class="paper">
@@ -313,7 +273,6 @@
               </div>
             </div>
           </div>
-
           <div class="paper">
             <img height="110px" width="210px" src="./img/publication/survey23.webp">
             <div class="pauthors">S.Hu, X.Zhao, and K.Huang</div>
@@ -326,7 +285,6 @@
               <a href="./img/bibtex/Survey23.bib">[BibTex]</a>
             </div>
           </div>
-
           <div class="paper">
             <img height="110px" width="210px" src="./img/publication/mgit.webp">
             <div class="pauthors">S.Hu, D.Zhang, M.Wu, X.Feng, X.Li, X.Zhao, and K.Huang.</div>
@@ -339,7 +297,6 @@
               <a href="./img/bibtex/MGIT.bib">[BibTex]</a>
             </div>
           </div>
-
           <div class="paper">
             <img height="110px" width="210px" src="./img/publication/sotverse.webp">
             <div class="pauthors">S.Hu, X.Zhao, and K.Huang.</div>
@@ -350,7 +307,6 @@
               <a href="./img/bibtex/SOTVerse.bib">[BibTex]</a>
             </div>
           </div>
-
           <div id="year_2023">
             <h3>2022</h3>
             <div class="paper">
@@ -367,7 +323,6 @@
                 <a href="./img/bibtex/GIT.bib">[BibTex]</a>
               </div>
             </div>
-
             <div id="year_2019">
               <h3>2019</h3>
               <div class="paper">
@@ -402,7 +357,6 @@
               <a target="_blank">[BibTex]</a>
             </div>
           </div>
-
           <div class="paper">
             <img height="110px" width="210px" src="./img/review/dtllm.webp">
             <div class="pauthors">X.Li, X.Feng, S.Hu, M.Wu, D.Zhang, J.Zhang, and K.Huang. </div>
@@ -418,6 +372,16 @@
     </div>
   </div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var menuButton = document.querySelector('.hamburger');
+      var navigation = document.getElementById('navigation');
+
+      menuButton.addEventListener('click', function () {
+        navigation.classList.toggle('show-menu');
+      });
+    });
+  </script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"
@@ -428,8 +392,6 @@
   <script>
     $(function () { $('[data-toggle="tooltip"]').tooltip() })
   </script>
-
-
 </body>
 
 </html>
