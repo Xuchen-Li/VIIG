@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.webp" type="image/x-icon">
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -46,6 +47,31 @@
       opacity: 1;
       visibility: visible;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .container,
+    .row,
+    .col-sm-12 {
+      width: 100%;
+      height: auto;
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.6em;
+      margin: 15px 0;
+    }
+
+    .frame {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .frame {
+        width: 30%;
+      }
     }
   </style>
 </head>
