@@ -2,52 +2,16 @@
 <html lang="en">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.webp" type="image/x-icon">
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Publication - Visual Intelligence Interest Group (VIIG)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/stanford.css">
-  <link rel="stylesheet" href="css/fotter.css">
+  <link rel="stylesheet" href="css/hamburger.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/img.css">
 
-  <script src="js/jquery.min.js"></script>
-
-  <script>
-    function display(id_) {
-      var id_div = document.getElementById(id_)
-      if (id_div.style.display == "none") {
-        id_div.style.display = "";
-      } else {
-        id_div.style.display = "none";
-      }
-    }
-
-    $(document).ready(function () {
-      var button_patents = document.getElementById("button_patents");
-      var button_paper = document.getElementById("button_paper");
-
-      $("#button_paper").click(function () {
-        if (window.getComputedStyle(button_paper, null).backgroundColor == 'rgba(0, 0, 0, 0)') {
-          $("#patents_list").toggle();
-          $("#paper_list").toggle();
-          button_patents.style.backgroundColor = 'Transparent';
-          button_patents.style.color = '#1c3ed3';
-          button_paper.style.backgroundColor = '#1c3ed3';
-          button_paper.style.color = '#fff';
-        }
-      });
-      $("#button_patents").click(function () {
-        if (window.getComputedStyle(button_patents, null).backgroundColor == 'rgba(0, 0, 0, 0)') {
-          $("#patents_list").toggle();
-          $("#paper_list").toggle();
-          button_patents.style.backgroundColor = '#1c3ed3';
-          button_patents.style.color = '#fff';
-          button_paper.style.backgroundColor = 'Transparent';
-          button_paper.style.color = '#1c3ed3';
-        }
-      });
-    });
-  </script>
   <style type="text/css">
     li {
       text-align: justify;
@@ -68,25 +32,28 @@
       cursor: pointer;
       outline: none;
       text-align: center;
+      border-radius: 10px;
     }
 
-    #button_paper {
+    #button_accept {
       background-color: #1c3ed3;
       color: #fff;
       display: block;
-      grid-column: 1 / 8;
-      grid-row: 1 / 1;
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+      border-radius: 10px;
     }
 
-    #button_patents {
+    #button_review {
       background-color: Transparent;
       color: #1c3ed3;
       display: block;
-      grid-column: 8 / 8;
+      grid-column: 3 / 6;
       grid-row: 1 / 2;
+      border-radius: 10px;
     }
 
-    #patents_list {
+    #review_list {
       display: none;
     }
 
@@ -143,35 +110,11 @@
       margin-bottom: 10px;
     }
 
-    .hamburger {
-      position: relative;
-      cursor: pointer;
-      z-index: 1000;
-    }
-
-    #navigation {
-      position: absolute;
-      top: 100%;
-      left: -40px;
-      width: 200%;
-      box-sizing: border-box;
-      background-color: rgba(255, 255, 255);
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s, visibility 0.3s;
-      box-shadow: none;
-    }
-
-    #navigation.show-menu {
-      opacity: 1;
-      visibility: visible;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    @media (max-width: 600px) {
+      .paper img {
+        width: 100%;
+        height: auto;
+      }
     }
   </style>
 </head>
@@ -240,10 +183,10 @@
 
     <div class="container mt-2">
       <div id="button_select">
-        <a type="button" id="button_paper" class="header container"><span>Acceptance</span></a>
-        <a type="button" id="button_patents" class="header container">Under Review</a>
+        <a type="button" id="button_accept" class="header container"><span>Acceptance</span></a>
+        <a type="button" id="button_review" class="header container">Under Review</a>
       </div>
-      <div id="paper_list">
+      <div id="accept_list">
         <div id="year_2024">
           <h3>2024</h3>
           <div class="paper">
@@ -343,7 +286,7 @@
           </div>
         </div>
       </div>
-      <div id="patents_list">
+      <div id="review_list">
         <div id="year_2024">
           <h3>2024</h3>
           <div class="paper">
@@ -382,16 +325,47 @@
       });
     });
   </script>
+  <script src="js/jquery.min.js"></script>
+  <script>
+    function display(id_) {
+      var id_div = document.getElementById(id_)
+      if (id_div.style.display == "none") {
+        id_div.style.display = "";
+      } else {
+        id_div.style.display = "none";
+      }
+    }
+
+    $(document).ready(function () {
+      var button_review = document.getElementById("button_review");
+      var button_accept = document.getElementById("button_accept");
+
+      $("#button_accept").click(function () {
+        if (window.getComputedStyle(button_accept, null).backgroundColor == 'rgba(0, 0, 0, 0)') {
+          $("#review_list").toggle();
+          $("#accept_list").toggle();
+          button_review.style.backgroundColor = 'Transparent';
+          button_review.style.color = '#1c3ed3';
+          button_accept.style.backgroundColor = '#1c3ed3';
+          button_accept.style.color = '#fff';
+        }
+      });
+      $("#button_review").click(function () {
+        if (window.getComputedStyle(button_review, null).backgroundColor == 'rgba(0, 0, 0, 0)') {
+          $("#review_list").toggle();
+          $("#accept_list").toggle();
+          button_review.style.backgroundColor = '#1c3ed3';
+          button_review.style.color = '#fff';
+          button_accept.style.backgroundColor = 'Transparent';
+          button_accept.style.color = '#1c3ed3';
+        }
+      });
+    });
+  </script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"
     integrity="sha256-fTuUgtT7O2rqoImwjrhDgbXTKUwyxxujIMRIK7TbuNU=" crossorigin="anonymous"></script>
-  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/04.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <script>
-    $(function () { $('[data-toggle="tooltip"]').tooltip() })
-  </script> -->
 </body>
 
 </html>

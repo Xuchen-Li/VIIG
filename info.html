@@ -2,19 +2,17 @@
 <html lang="en">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.webp" type="image/x-icon">
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Demos - Visual Intelligence Interest Group (VIIG)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/fotter.css">
   <link rel="stylesheet" href="css/stanford.css">
+  <link rel="stylesheet" href="css/hamburger.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/img.css">
 
   <style type="text/css">
-    /* ul {
-      margin-left: 20px;
-    } */
-
     p {
       text-align: justify;
     }
@@ -31,37 +29,6 @@
     video {
       width: 100%;
       height: auto;
-    }
-
-    .hamburger {
-      position: relative;
-      cursor: pointer;
-      z-index: 1000;
-    }
-
-    #navigation {
-      position: absolute;
-      top: 100%;
-      left: -40px;
-      width: 200%;
-      box-sizing: border-box;
-      background-color: rgba(255, 255, 255);
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s, visibility 0.3s;
-      box-shadow: none;
-    }
-
-    #navigation.show-menu {
-      opacity: 1;
-      visibility: visible;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
@@ -329,16 +296,9 @@
       });
     });
   </script>
-  <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery-3.4.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"
     integrity="sha256-fTuUgtT7O2rqoImwjrhDgbXTKUwyxxujIMRIK7TbuNU=" crossorigin="anonymous"></script>
-  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <script>
-    $(function () { $('[data-toggle="tooltip"]').tooltip() })
-  </script> -->
 </body>
 
 </html>
