@@ -23,11 +23,6 @@
       width: 100%;
     }
 
-    video {
-      width: 100%;
-      height: auto;
-    }
-
     .hamburger {
       position: relative;
       cursor: pointer;
@@ -92,6 +87,22 @@
       background-color: #e0e0e0;
       color: #000;
       border-radius: 10px;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      p {
+        font-size: calc(3vw);
+      }
+
+      h3 {
+        font-size: calc(4vw);
+      }
     }
   </style>
 </head>
@@ -162,19 +173,21 @@
       <div>
         <ul>
           <ul>
-            <h3>GOT-10k: A Large High-diversity Benchmark and Evaluation Platform for Single Object Tracking</h3>
+            <h3><strong>GOT-10k: A Large High-diversity Benchmark and Evaluation Platform for Single Object
+                Tracking</strong>
+            </h3>
             <p>
               Visual Object Tracking & Evaluation Technology & Large High-diversity Benchmark
             </p>
             <p>
               GOT-10k is constructed to evaluate the generalization ability of trackers on unseen object classes and
               motion patterns. The platform provides a high-quality video trajectory dataset containing 10,000 video
-              segments, 563 object classes, 87 motion patterns, and 1.5 million tight annotations, where its coverage of
-              object classes is magnitudes wider than other existing tracking benchmarks.
+              segments, 563 object classes, 87 motion patterns, and 1.5 million tight annotations.
             </p>
             <p>
-              GOT-10k is the supporting platform for a research accepted by IEEE TPAMI. It receives 3.24m page views,
-              6.7k+ downloads, 17.9k+ trackers from 150+ countries(statistics by Feb. 2024).
+              GOT-10k is the supporting platform for a research accepted by IEEE TPAMI 2019. As of Feb. 2024, the
+              platform has received 3.24M+ page views, 6k+ downloads, 18k+ trackers from 160+ countries and
+              regions worldwide.
             </p>
           </ul>
         </ul>
@@ -194,25 +207,22 @@
       <div>
         <ul>
           <ul>
-            <h3>VideoCube: A Large-scale Multi-dimensional Global Instance Tracking Intelligent Evaluation Platform</h3>
+            <h3><strong>VideoCube: A Large-scale Multi-dimensional Global Instance Tracking Intelligent Evaluation
+                Platform</strong>
+            </h3>
             <p>
               Visual Object Tracking & Large-scale Benchmark Construction & Intelligent Evaluation Technology
             </p>
             <p>
-              This work builds upon the concept of human-like modeling and expands the defi
-              nition of single object tracking (SOT) task. It presents a new task called global instance
-              tracking (GIT), which broadens the range of applications to adversarial scenarios.
-              This work proposes a video narrative content decoupling framework based on film
-              theory, and builds a large-scale, multi-dimensional global instance tracking task intel
-              ligent evaluation platform called VideoCube, which includes 7.46 million video frames.
-              It is currently the largest SOT benchmark in terms of scale.
-              Starting from human-computer confrontation, for the first time, human subjects
-              are introduced into the SOT task in order to measure the visual tracking intelligence.
+              This work builds on the concept of human-like modeling and expands the definition of single object
+              tracking (SOT) task. It presents a new task called global instance tracking (GIT). This work builds a
+              large-scale, multi-dimensional global instance tracking task intelligent evaluation platform called
+              VideoCube.
             </p>
             <p>
-              This work has been published by IEEE TPAMI (IF=23.6) in Jan. 2023. As of
-              Feb. 2024, the platform has received over 315k visits from more than 130 countries and
-              regions worldwide, with over 1,000 downloads and more than 400 algorithm tests.
+              VideoCube is the supporting platform for research accepted by IEEE TPAMI 2022. As of Feb. 2024, the
+              platform has received 315k+ page views, 1k+ downloads, 400+ trackers from 130+ countries and
+              regions worldwide.
             </p>
           </ul>
         </ul>
@@ -232,27 +242,21 @@
       <div>
         <ul>
           <ul>
-            <h3>MGIT: A Multi-modal Global Instance Tracking Benchmark Based on Hierarchical Semantic Framework</h3>
+            <h3><strong>MGIT: A Multi-modal Global Instance Tracking Benchmark Based on Hierarchical Semantic
+                Framework</strong></h3>
             <p>
-              Visual Language Tracking & Long Video Understanding and Reasoning & Hierar
-              chical Semantic Information Annotation
+              Visual Language Tracking & Long Video Understanding and Reasoning & Hierarchical Semantic Information
+              Annotation
             </p>
             <p>
               This work extends the GIT task and the VideoCube benchmark by constructing a
               multi-modal benchmark called MGIT. The MGIT benchmark is designed to capture
               the complex video narrative relationships and fully encompass the intricate spatio
               temporal and causal connections illustrated in long videos.
-              This work introduces an innovative multi-granularity semantic information anno
-              tation strategy by incorporating the hierarchical structure of human cognition. The
-              strategy aims to provide high-quality semantic information and its effectiveness is val
-              idated through experiments.
-              This work introduces an innovative multi-granularity semantic information anno
-              tation strategy by incorporating the hierarchical structure of human cognition. The
-              strategy aims to provide high-quality semantic information and its effectiveness is val
-              idated through experiments.
             </p>
             <p>
-              This work has been accepted by NeurIPS in Sep. 2023.
+              MGIT is the supporting platform for research accepted by NeurIPS 2023. As of Feb. 2024, the platform has
+              received 315k+ page views, 1k+ downloads, 400+ trackers from 130+ countries and regions worldwide.
             </p>
           </ul>
         </ul>
@@ -272,8 +276,8 @@
       <div>
         <ul>
           <ul>
-            <h3>BioDrone: A Bionic Drone-based Single Object Tracking Benchmark for Ro
-              bust Vision</h3>
+            <h3><strong>BioDrone: A Bionic Drone-based Single Object Tracking Benchmark for Ro
+                bust Vision</strong></h3>
             <p>
               Visual Object Tracking & Drone-based Tracking & Robust Visual Research
             </p>
@@ -282,16 +286,10 @@
               tured from a flapping-wing UAV system with a major camera shake due to its aerody
               namics. BioDrone highlights the tracking of tiny targets with drastic changes between
               consecutive frames, providing a new robust vision benchmark for SOT.
-              Twenty representative algorithms have been replicated and tested on BioDrone,
-              followed by a detailed analysis of the robustness bottlenecks.
-              Abaseline algorithm namedUAV-KThasbeendesigned. Experimentalanalysishas
-              beenconductedtovalidate the effectiveness of this method in extracting visual features
-              and maintaining robustness in challenging factors present in UAV scenes.
             </p>
             <p>
-              This work supported the organization of the 3rd High-Speed Low-Power Visual
-              Understanding Challenge as competition data from May to Oct. 2022. The work has
-              been accepted by IJCV (IF=19.5) in Oct. 2023
+              BioDrone is the supporting platform for research accepted by IJCV 2023 and the organization of the 3rd
+              High-Speed Low-Power Visual Understanding Challenge as competition data.
             </p>
           </ul>
         </ul>
@@ -311,26 +309,19 @@
       <div>
         <ul>
           <ul>
-            <h3>AWCV-100k: A Unconstrained Air-writing Benchmark for Real-World Applications</h3>
+            <h3><strong>AWCV-100k: A Unconstrained Air-writing Benchmark for Real-World Applications</strong></h3>
             <p>
               Air-writing Technique & Benchmark Construction & Human-machine Interaction
             </p>
             <p>
-              This study has developed a large-scale and high-quality video dataset named AWCV-100k, which consists of
-              air-writing of Chinese characters. The objective is to establish a more natural and comprehensive
-              experimental environment for human-computer interaction (HCI) research.
-              The AWCV-100k dataset comprises 8.8 million video frames, encompassing diverse environmental settings and
-              lighting conditions. It provides comprehensive coverage of 3,755 Chinese characters from the GB2312-80
-              character set, establishing it as the most extensive and comprehensive air-writing video dataset currently
-              accessible.
-              An air-writing character recognition algorithm called VCRec is proposed. This baseline algorithm is
-              capable of extracting fingertip features from sparse visual cues and analyzing them using a
-              spatio-temporal sequence module. Representative algorithms and VCRec have been reproduced and tested on
-              the AWCV-100k. Experimental results confirm the robustness and effectiveness of VCRec.
+              The AWCV-100k dataset comprises 8.8 million video frames, encompassing diverse environmental settings
+              and lighting conditions. It provides comprehensive coverage of 3,755 Chinese characters from the GB2312-80
+              character set, establishing it as the most extensive and comprehensive air-writing video dataset
+              currently accessible.
             </p>
             <p>
-              This work has been accepted by IEEE TCSVT (IF=8.4) in Apr. 2024. Subsequent work will be conducted
-              based on this benchmark for HCI technology research.
+              AWCV-100k is the supporting platform for research accepted by IEEE TCSVT 2024. Subsequent work will be
+              conducted based on this benchmark for HCI technology research.
             </p>
           </ul>
         </ul>
