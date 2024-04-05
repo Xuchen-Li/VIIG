@@ -37,6 +37,72 @@
     p {
       text-align: justify;
     }
+
+    .hamburger {
+      position: relative;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    #navigation {
+      position: absolute;
+      top: 100%;
+      left: -40px;
+      width: 200%;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255);
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+      box-shadow: none;
+      border-radius: 10px;
+    }
+
+    #navigation.show-menu {
+      opacity: 1;
+      visibility: visible;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-title img {
+      border-radius: 10px;
+    }
+
+    .menu-item-about.active a,
+    .menu-item-people.active a,
+    .menu-item-publications.active a,
+    .menu-item-software.active a,
+    .menu-item-others.active a {
+      border-radius: 10px;
+    }
+
+    #main-menu ul li a {
+      display: block;
+      padding: 10px 15px;
+      border-radius: 10px;
+      transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
+    }
+
+    #main-menu ul li a:hover {
+      border-radius: 10px;
+    }
+
+    #main-menu ul li a span {
+      display: inline-block;
+      transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
+    }
+
+    #main-menu ul li a span.active {
+      background-color: #e0e0e0;
+      color: #000;
+      border-radius: 10px;
+    }
   </style>
 </head>
 
