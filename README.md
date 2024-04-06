@@ -1,1 +1,1 @@
-Visual Intelligence Interest Group (VIIG), which has been updating since 2024.
+Website for Visual Intelligence Interest Group (VIIG), which has been updating since 2024.4.
