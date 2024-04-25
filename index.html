@@ -135,6 +135,20 @@
       color: #000;
       border-radius: 10px;
     }
+
+    .container p {
+      word-break: break-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      -ms-hyphens: auto;
+      overflow-wrap: break-word;
+      /* 允许在任意字符间断行 */
+    }
+
+    .hyphenate::after {
+      content: "-";
+    }
   </style>
 </head>
 
@@ -318,7 +332,7 @@
           <h3><strong>News</strong></h3>
           <p><span class="label-info">2024.04</span>📣We will present our work (<a
               href="https://ieeexplore.ieee.org/abstract/document/9720246">Global Instance Tracking (GIT)</a>) at
-            TPAMI2023 during the <a href="http://www.valser.org/2024/#/">VALSE2024</a> poster session (May 2024,
+            TPAMI'23 during the <a href="http://www.valser.org/2024/#/">VALSE2024</a> poster session (May 2024,
             Chongqing, China) and extend a warm invitation to colleagues interested in object tracking, evaluation
             methodologies, and human-computer interaction to engage in discussions with us (see our <a
               href="https://huuuuusy.github.io/files/VALSE24Poster-364.pdf">🪧Poster</a> for more information).</p>
